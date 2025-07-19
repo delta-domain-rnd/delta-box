@@ -1,7 +1,9 @@
 #!/bin/sh
 
 # Needs to be hardcoded to run from web
-app_name="box000_blank_system"
+app_name="box001_yt_search"
+
+TAG=latest
 
 get_container_id() {
   docker ps -a --no-trunc --filter name=^/$app_name$ | sed -n 2p | cut -d' ' -f1
@@ -25,13 +27,3 @@ else
     fi
 fi
 
-
-# User quit the shell, kill the container
-
-container_id=$(get_container_id)
-
-if [ ! -z $container_id ]; then
-  echo "Bye!"
-  docker container stop $container_id -t 1
-  docker rm $container_id
-fi

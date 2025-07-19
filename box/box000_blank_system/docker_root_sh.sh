@@ -10,11 +10,11 @@ get_container_id() {
 container_id=$(get_container_id)
 
 if [ ! -z $container_id ]; then
-  docker exec -it $container_id sh
+  docker exec -it --user root $container_id sh
 else
     docker run -d \
       -v $MOUNT:/mnt/ \
-      --user $(id -u):$(id -g) \
+      --user root \
       --name $app_name \
       lan22h/$app_name:$TAG
     

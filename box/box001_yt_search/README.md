@@ -6,18 +6,12 @@ It supports some minimal things, like having a mounting space to read and write 
 
 # To instantly run
 
-Start a container and shell (Stops on Ctrl+D):
+Start a container and shell:
 ```sh
 TAG="ubuntu_25.04" MOUNT="." sh <(curl -sSf https://raw.githubusercontent.com/delta-domain-rnd/delta-box/refs/heads/main/box/box000_blank_system/docker_sh.sh)
 ```
 
-Or over root:
-
-```sh
-TAG="ubuntu_25.04" MOUNT="." sh <(curl -sSf https://raw.githubusercontent.com/delta-domain-rnd/delta-box/refs/heads/main/box/box000_blank_system/docker_root_sh.sh)
-```
-
-To stop the container manually:
+Stop the container when done:
 
 ```sh
 sh <(curl -sSf https://raw.githubusercontent.com/delta-domain-rnd/delta-box/refs/heads/main/box/box000_blank_system/docker_stop.sh)

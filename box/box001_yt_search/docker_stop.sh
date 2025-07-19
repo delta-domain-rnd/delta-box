@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Needs to be hardcoded to run from web
-app_name="box000_blank_system"
+app_name="box001_yt_search"
 
 get_container_id() {
   docker ps -a --no-trunc --filter name=^/$app_name$ | sed -n 2p | cut -d' ' -f1

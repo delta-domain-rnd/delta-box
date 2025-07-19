@@ -1,4 +1,4 @@
-app_name="box000_blank_system"
+app_name="box001_yt_search"
 
 if [ "$(cat is_persistent)" = "Yes" ]; then
   docker kill $app_name || echo '' > /dev/null

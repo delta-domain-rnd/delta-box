@@ -1,6 +1,7 @@
 #!/bin/sh
 
-app_name="box000_blank_system"
+
+app_name="box001_yt_search"
 
 # Mount points for development.
 export MOUNT_POINT=$HOME/data/mounted/$app_name/
