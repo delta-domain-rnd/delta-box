@@ -23,6 +23,14 @@ To stop the container manually:
 sh <(curl -sSf https://raw.githubusercontent.com/delta-domain-rnd/delta-box/refs/heads/main/box/box000_blank_system/docker_stop.sh)
 ```
 
+This can also be run over root using bash and an initial file run from the mountpoint:
+
+```sh
+TAG="ubuntu_25.04" MOUNT="." INIT_FILE="hello.sh" sh <(curl -sSf https://raw.githubusercontent.com/delta-domain-rnd/delta-box/refs/heads/main/box/box000_blank_system/docker_root_bash.sh)
+```
+
+
+
 # Build
 
 ```sh

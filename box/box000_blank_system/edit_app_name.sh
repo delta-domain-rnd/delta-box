@@ -17,6 +17,6 @@ echo $files_to_process | tr ' ' '\n' | while read file; do
   if [ $found -eq 0 ]; then
     echo OK $file
 
-    sed -i "s/app_name=.*/app_name=\"$only_dir\"/" $file
+    sed -i "s/app_name=.*/app_name=\"$only_dir\" # variable created with edit_app_name.sh /" $file
   fi
 done
